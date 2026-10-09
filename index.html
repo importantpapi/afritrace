@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Afritrace — CBAM · EUDR · Battery Passport</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#0a0b0d; --text:#f0f1f3; --muted:#8b90a0; --accent:#3d8bfd; --card:#16181f; --border:#2a2d38; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:"Instrument Sans",system-ui,sans-serif; background:var(--bg); color:var(--text);
+      min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+      background-image: radial-gradient(ellipse 80% 50% at 20% -10%, rgba(61,139,253,0.08), transparent); }
+    .wrap { text-align:center; padding:32px 24px; max-width:520px; }
+    .badge { display:inline-flex; align-items:center; gap:6px; background:rgba(61,139,253,0.12); color:var(--accent);
+      font-size:0.7rem; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; padding:6px 12px; border-radius:100px; margin-bottom:20px; }
+    .dot { width:7px; height:7px; border-radius:50%; background:#34d399; box-shadow:0 0 6px #34d399; }
+    h1 { font-size:2.2rem; letter-spacing:-0.03em; line-height:1.15; margin-bottom:12px; }
+    h1 span { color:var(--muted); font-weight:500; }
+    p { color:var(--muted); margin-bottom:28px; line-height:1.5; }
+    .btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+    a.btn { display:inline-flex; padding:12px 20px; border-radius:10px; font-weight:600; font-size:0.9rem; text-decoration:none; }
+    a.primary { background:var(--accent); color:#fff; }
+    a.ghost { border:1px solid var(--border); color:var(--text); }
+    .links { margin-top:40px; font-size:0.8rem; color:var(--muted); }
+    .links a { color:var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="badge"><span class="dot"></span> Live MVP · October 2026</div>
+    <h1>Compliance for African trade.<br /><span>CBAM · EUDR · Battery Passport.</span></h1>
+    <p>AI agents that cut EU compliance costs by 90%. Steel, aluminum, cocoa, lithium, cobalt & nickel.</p>
+    <div class="btns">
+      <a class="btn primary" href="/app.html">Open full UI</a>
+      <a class="btn ghost" href="https://github.com/importantpapi/afritrace">GitHub repo</a>
+    </div>
+    <div class="links">
+      Repo: <a href="https://github.com/importantpapi/afritrace">importantpapi/afritrace</a><br />
+      Connect this repo in Vercel → deploy → public link in ~30s
+    </div>
+  </div>
+</body>
+</html>
