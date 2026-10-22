@@ -1,45 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Afritrace — CBAM · EUDR · Battery Passport</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root { --bg:#0a0b0d; --text:#f0f1f3; --muted:#8b90a0; --accent:#3d8bfd; --card:#16181f; --border:#2a2d38; }
-    * { box-sizing:border-box; margin:0; padding:0; }
-    body { font-family:"Instrument Sans",system-ui,sans-serif; background:var(--bg); color:var(--text);
-      min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
-      background-image: radial-gradient(ellipse 80% 50% at 20% -10%, rgba(61,139,253,0.08), transparent); }
-    .wrap { text-align:center; padding:32px 24px; max-width:520px; }
-    .badge { display:inline-flex; align-items:center; gap:6px; background:rgba(61,139,253,0.12); color:var(--accent);
-      font-size:0.7rem; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; padding:6px 12px; border-radius:100px; margin-bottom:20px; }
-    .dot { width:7px; height:7px; border-radius:50%; background:#34d399; box-shadow:0 0 6px #34d399; }
-    h1 { font-size:2.2rem; letter-spacing:-0.03em; line-height:1.15; margin-bottom:12px; }
-    h1 span { color:var(--muted); font-weight:500; }
-    p { color:var(--muted); margin-bottom:28px; line-height:1.5; }
-    .btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-    a.btn { display:inline-flex; padding:12px 20px; border-radius:10px; font-weight:600; font-size:0.9rem; text-decoration:none; }
-    a.primary { background:var(--accent); color:#fff; }
-    a.ghost { border:1px solid var(--border); color:var(--text); }
-    .links { margin-top:40px; font-size:0.8rem; color:var(--muted); }
-    .links a { color:var(--accent); }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <div class="badge"><span class="dot"></span> Live MVP · October 2026</div>
-    <h1>Compliance for African trade.<br /><span>CBAM · EUDR · Battery Passport.</span></h1>
-    <p>AI agents that cut EU compliance costs by 90%. Steel, aluminum, cocoa, lithium, cobalt & nickel.</p>
-    <div class="btns">
-      <a class="btn primary" href="/app.html">Open full UI</a>
-      <a class="btn ghost" href="https://github.com/importantpapi/afritrace">GitHub repo</a>
-    </div>
-    <div class="links">
-      Repo: <a href="https://github.com/importantpapi/afritrace">importantpapi/afritrace</a><br />
-      Connect this repo in Vercel → deploy → public link in ~30s
-    </div>
-  </div>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Afritrace</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><style>:root{--bg:#fafafa;--s:#fff;--ink:#0a0a0b;--m:#5c5c66;--line:#e8e8ec;--g:#0f766e;--soft:#e6f7f5;--font:Inter,system-ui,sans-serif}*{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.5}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer;border:none;background:none;color:inherit}.hidden{display:none!important}.h-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1100px;margin:0 auto;flex-wrap:wrap;gap:8px}.logo{display:flex;align-items:center;gap:8px;font-weight:800}.logo span{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#0f766e,#14b8a6);display:grid;place-items:center;color:#fff;font-size:.75rem;font-weight:900}.nav a{font-size:.85rem;color:var(--m);padding:8px 10px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 20px;border-radius:999px;font-weight:600;font-size:.88rem}.btn-d{background:#111;color:#fff}.btn-g{background:var(--g);color:#fff}.btn-l{background:var(--s);border:1px solid var(--line)}.hero{max-width:720px;margin:0 auto;padding:72px 20px 40px;text-align:center}.hero h1{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.04em;line-height:1.1;font-weight:800;margin-bottom:14px}.hero p{font-size:1.1rem;color:var(--m);margin:0 auto 24px;max-width:500px}.cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}.note{font-size:.78rem;color:var(--m)}.proof{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;padding:20px;border-block:1px solid var(--line);background:var(--s);font-size:.78rem;color:var(--m)}.proof strong{display:block;color:var(--ink);font-size:.9rem}.sec{max-width:900px;margin:0 auto;padding:48px 20px}.sec h2{text-align:center;font-size:1.45rem;margin-bottom:6px}.sec .sub{text-align:center;color:var(--m);margin-bottom:22px}.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:700px){.g2{grid-template-columns:1fr}}.ch{background:var(--s);border:1px solid var(--line);border-radius:14px;padding:18px}.ch h3{font-size:.95rem;margin-bottom:6px}.ch p,.ch ul{font-size:.88rem;color:var(--m)}.ch ul{margin:0 0 0 16px}.pay{margin-top:8px;font-weight:700;color:var(--g)}.cta-b{text-align:center;padding:32px 20px 56px}#app{display:none;min-height:100vh}#app.on{display:flex}.side{width:220px;background:var(--s);border-right:1px solid var(--line);padding:12px 8px;display:flex;flex-direction:column;flex-shrink:0}.ni{display:flex;width:100%;padding:9px 10px;border-radius:8px;font-size:.84rem;font-weight:500;color:var(--m);text-align:left}.ni:hover{background:#f3f3f5}.ni.on{background:#f0f0f3;color:var(--ink);font-weight:600}.main{flex:1;overflow:auto;padding:22px 24px}.page{display:none}.page.on{display:block}.mh{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px}.mh h1{font-size:1.25rem}.fc{background:var(--s);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:12px}.ft{display:flex;gap:12px;flex-wrap:wrap}.ring{width:52px;height:52px;border-radius:50%;border:3px solid var(--g);display:grid;place-items:center;font-weight:800;color:var(--g)}.ring.w{border-color:#f59e0b;color:#d97706}.tt{font-weight:700;font-size:1.05rem}.tm{font-size:.8rem;color:var(--m)}.ts{font-weight:600;margin:4px 0}.tags{display:flex;flex-wrap:wrap;gap:5px;margin:6px 0}.tag{font-size:.68rem;padding:3px 8px;border-radius:999px;background:#f3f3f5}.tag.ok{background:var(--soft);color:var(--g)}.act{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.act .btn{padding:8px 14px;font-size:.8rem}.panel{background:var(--s);border:1px solid var(--line);border-radius:12px;padding:14px}label{display:block;font-size:.62rem;font-weight:600;text-transform:uppercase;color:#a1a1aa;margin:6px 0 3px}input,select,textarea{width:100%;background:#f4f4f5;border:1px solid transparent;border-radius:9px;padding:9px 11px}textarea{min-height:70px;font-size:.84rem}.r2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.tg{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:800px){.tg{grid-template-columns:1fr}}.ag{display:flex;gap:8px;padding:8px;border-radius:8px;background:#f4f4f5;margin-bottom:4px;opacity:0;transform:translateY(4px);transition:.25s}.ag.show{opacity:1;transform:none}.ag.ok{background:var(--soft)}.ag .d{width:20px;height:20px;border-radius:50%;background:#ddd;display:grid;place-items:center;font-size:.65rem;font-weight:800}.ag.ok .d{background:var(--g);color:#fff}.ag .n{font-size:.58rem;font-weight:700;color:var(--g);text-transform:uppercase}.ag .m{font-size:.8rem}.met{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}.metric{background:#f4f4f5;border-radius:8px;padding:8px}.metric strong{display:block;font-size:1.05rem}.metric span{font-size:.58rem;color:#888}.metric.ok strong{color:var(--g)}.gap{padding:6px 8px;border-radius:7px;background:#fff7ed;border:1px solid #fed7aa;margin:4px 0;font-size:.78rem}.gap.good{background:#ecfdf5;border-color:#a7f3d0}pre{background:#111;color:#5eead4;padding:8px;border-radius:8px;font-size:.62rem;overflow:auto;max-height:100px;margin-top:6px}.money{margin-top:8px;padding:10px;border-radius:10px;background:#111;color:#fff;font-size:.82rem}.tl{border-left:2px solid var(--line);margin:8px 0 0 6px;padding-left:10px}.tl-i{margin-bottom:8px;font-size:.82rem}.role{font-size:.58rem;font-weight:700;padding:2px 5px;border-radius:999px;background:#e0e7ff;color:#3730a3;margin-right:3px}@media(max-width:700px){.side{display:none}#app.on{flex-direction:column}}</style></head><body>
+<div id="home">
+<nav class="h-nav"><div class="logo"><span>A</span> Afritrace</div>
+<div class="nav"><a href="#who">Who pays</a><a href="#how">How it works</a>
+<button class="btn btn-d" style="padding:8px 14px;font-size:.82rem" onclick="enterApp()">Enter app</button></div></nav>
+<header class="hero">
+<h1>EU buyers need proof.<br/>African suppliers need a pack.</h1>
+<p>Every Africa→EU shipment becomes an audit-ready Shipment Passport — importers keep access, exporters keep contracts.</p>
+<div class="cta"><button class="btn btn-d" onclick="enterApp()">Open free workspace</button>
+<a class="btn btn-l" href="#who">See who pays</a></div>
+<p class="note">No credit card · Pilots from €500/shipment · Human review included</p>
+</header>
+<div class="proof">
+<div><strong>30 Dec 2026</strong>EUDR large operators</div>
+<div><strong>€500–€1,500</strong>per Shipment Passport</div>
+<div><strong>€10k–€30k/mo</strong>buyer monitoring</div>
+<div><strong>6 agents</strong>extract → reorder</div>
+</div>
+<section class="sec" id="who"><h2>Who pays — and why</h2>
+<p class="sub">Money comes from compliance risk, not AI curiosity.</p>
+<div class="g2">
+<div class="ch"><h3>EU importer (primary)</h3>
+<ul><li>Must prove origin/emissions or risk fines</li><li>Buys clean packs for their team</li><li>Per shipment or monthly seat</li></ul>
+<div class="pay">€500–€1,500/shipment or €10k–€30k/mo</div></div>
+<div class="ch"><h3>African exporter / co-op</h3>
+<ul><li>Must stay on EU buyer lists</li><li>Supplier Passport for many buyers</li><li>Annual seat</li></ul>
+<div class="pay">€2,500–€7,500/year</div></div>
+</div></section>
+<section class="sec" id="how"><h2>How it works</h2>
+<p class="sub">Four stops. One paid pack.</p>
+<div class="g2">
+<div class="ch"><h3>1. Open shipment</h3><p>Buyer + supplier + GPS + docs</p></div>
+<div class="ch"><h3>2. Agents run</h3><p>Extract → rules → gaps → export</p></div>
+<div class="ch"><h3>3. Team approves</h3><p>Mission room fixes gaps</p></div>
+<div class="ch"><h3>4. You invoice</h3><p>€500–€1,500 per passport</p></div>
+</div></section>
+<div class="cta-b"><button class="btn btn-g" onclick="enterApp()">Enter workspace and run a shipment →</button>
+<p class="note" style="margin-top:12px">Assistive — not a legal filing engine.</p></div>
+</div>
+<div id="app">
+<aside class="side">
+<div class="logo" style="padding:8px 10px 16px"><span>A</span> Afritrace</div>
+<button class="ni on" data-p="feed" onclick="nav('feed',this)">Feed</button>
+<button class="ni" data-p="passport" onclick="nav('passport',this)">New passport</button>
+<button class="ni" data-p="mission" onclick="nav('mission',this)">Mission room</button>
+<button class="ni" data-p="billing" onclick="nav('billing',this)">Billing</button>
+<button class="ni" onclick="exitApp()">← Homepage</button>
+</aside>
+<main class="main">
+<div id="feed" class="page on">
+<div class="mh"><h1>Shipment feed</h1>
+<button class="btn btn-d" onclick="nav('passport',document.querySelector('[data-p=passport]'))">+ New passport</button></div>
+<p style="color:var(--m);font-size:.85rem;margin-bottom:12px">Run agents or invoice the buyer.</p>
+<div class="fc"><div class="ft"><div class="ring">82</div><div>
+<div style="font-size:.65rem;font-weight:600;color:var(--g)">● Ready</div>
+<div class="tt">Cocoa · Soubré → Bruxelles</div>
+<div class="tm">Côte d'Ivoire · 40 t · EUDR</div>
+<div class="ts">€750 · Shipment Passport</div>
+<div class="tags"><span class="tag ok">GPS</span><span class="tag ok">Origin cert</span><span class="tag">Trust 82</span></div>
+</div></div>
+<div class="act">
+<button class="btn btn-l" onclick="nav('mission',document.querySelector('[data-p=mission]'))">Mission</button>
+<button class="btn btn-g" onclick="nav('passport',document.querySelector('[data-p=passport]'));setTimeout(runAgents,80)">Run agents</button>
+<button class="btn btn-d" onclick="nav('billing',document.querySelector('[data-p=billing]'))">Invoice €750</button>
+</div></div>
+<div class="fc"><div class="ft"><div class="ring w">54</div><div>
+<div style="font-size:.65rem;font-weight:600;color:#dc2626">● Gaps open</div>
+<div class="tt">Steel · Johannesburg → Antwerp</div>
+<div class="tm">South Africa · 120 t · CBAM</div>
+<div class="ts">€1,200 · needs energy data</div>
+</div></div>
+<div class="act"><button class="btn btn-g" onclick="nav('passport',document.querySelector('[data-p=passport]'))">Run agents</button></div></div>
+</div>
+<div id="passport" class="page">
+<div class="mh"><h1>New Shipment Passport</h1></div>
+<div class="tg"><div class="panel">
+<div class="r2"><div><label>Supplier</label><input id="f-sup" value="Coopérative Agricole Soubré"/></div>
+<div><label>EU buyer</label><input id="f-buy" value="Bruxelles Cocoa Trading SA"/></div></div>
+<div class="r2"><div><label>Product</label><select id="f-prod"><option value="cocoa">Cocoa (EUDR)</option><option value="steel">Steel (CBAM)</option></select></div>
+<div><label>Origin</label><select id="f-co"><option value="CI">Côte d'Ivoire</option><option value="GH">Ghana</option><option value="ZA">South Africa</option></select></div></div>
+<div class="r2"><div><label>Lat</label><input id="f-lat" type="number" value="5.785432" step="0.000001"/></div>
+<div><label>Lon</label><input id="f-lon" type="number" value="-6.601234" step="0.000001"/></div></div>
+<label>Docs / GPS / legality</label>
+<textarea id="f-docs">Plot GPS 5.785432, -6.601234. Production 2026-02-14. No deforestation after 2020. Certificate of origin CI-COC-2026-8821. Cooperative registration N° CI-REG-2019-441.</textarea>
+<button class="btn btn-d" style="width:100%;margin-top:10px" id="run" onclick="runAgents()">▶ Run all 6 agents</button>
+<div id="alog" style="margin-top:8px"></div></div>
+<div class="panel"><div id="empty" style="color:var(--m);padding:20px 0;text-align:center;font-size:.88rem">Run agents to see the pack.</div>
+<div id="out" class="hidden"><div class="met" id="met"></div><div id="gaps"></div><pre id="json"></pre>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+<button class="btn btn-l" onclick="dl()">Download pack</button>
+<button class="btn btn-g" onclick="nav('billing',document.querySelector('[data-p=billing]'))">Invoice €750</button></div>
+<div class="money"><strong>Bill €750 on this shipment</strong> — EU importer pays.</div></div></div></div></div>
+<div id="mission" class="page"><div class="mh"><h1>Mission room</h1></div>
+<div class="panel"><div id="m-empty" style="color:var(--m)">Run a passport first.</div>
+<div id="m-body" class="hidden"><div id="m-roles" style="margin-bottom:8px;font-size:.84rem"></div><div class="tl" id="m-tl"></div>
+<div class="r2" style="margin-top:10px"><select id="m-role"><option value="buyer">Buyer</option><option value="supplier">Supplier</option><option value="freight">Freight</option></select>
+<input id="m-msg" placeholder="Post update…"/></div>
+<button class="btn btn-l" style="margin-top:8px" onclick="postM()">Post</button></div></div></div>
+<div id="billing" class="page"><div class="mh"><h1>Billing</h1></div>
+<div class="tg"><div class="panel"><h3 style="margin-bottom:6px">How you get paid</h3>
+<p style="font-size:.88rem;color:var(--m)">EU importer (main) or African exporter (annual).</p>
+<ul style="margin:8px 0 0 16px;font-size:.85rem;color:var(--m)">
+<li>Pilot SOW €2,500–€7,500 (5–10 shipments)</li>
+<li>Per passport €500–€1,500</li>
+<li>Buyer seat €10k–€30k/month</li></ul></div>
+<div class="panel"><h3 style="margin-bottom:6px">This shipment</h3>
+<p style="font-size:1.4rem;font-weight:800;margin:6px 0">€750</p>
+<p style="font-size:.82rem;color:var(--m);margin-bottom:10px">Pilot SOW or wire. Stripe when keys are set.</p>
+<a class="btn btn-d" href="mailto:enterprise@afritrace.app?subject=Pilot%20SOW%20/%20Invoice%20€750">Email pilot / invoice</a></div></div></div>
+</main></div>
+<script>
+let SP=null,TL=[];
+function enterApp(){document.getElementById('home').classList.add('hidden');document.getElementById('app').classList.add('on');nav('feed',document.querySelector('[data-p=feed]'))}
+function exitApp(){document.getElementById('app').classList.remove('on');document.getElementById('home').classList.remove('hidden')}
+function nav(id,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));document.getElementById(id).classList.add('on');document.querySelectorAll('.ni').forEach(n=>n.classList.remove('on'));if(btn)btn.classList.add('on');else{const n=document.querySelector('[data-p='+id+']');if(n)n.classList.add('on')}}
+function sleep(ms){return new Promise(r=>setTimeout(r,ms))}
+function addAg(n,name,msg){const b=document.getElementById('alog');const e=document.createElement('div');e.className='ag';e.id='ag'+n;e.innerHTML='<div class="d">'+n+'</div><div><div class="n">'+name+'</div><div class="m">'+msg+'</div></div>';b.appendChild(e);requestAnimationFrame(()=>e.classList.add('show'))}
+function okAg(n){const e=document.getElementById('ag'+n);if(e)e.classList.add('ok')}
+function extract(t){t=(t||'').toLowerCase();return{hasGeo:/gps|plot|5\.|6\./.test(t),hasOrigin:/certificate|origin/.test(t),hasReg:/registration|cooperative|reg/.test(t)}}
+async function runAgents(){const btn=document.getElementById('run');if(btn){btn.disabled=true;btn.textContent='Running…'}document.getElementById('alog').innerHTML='';document.getElementById('out').classList.add('hidden');document.getElementById('empty').classList.remove('hidden');TL=[];
+const supplier=document.getElementById('f-sup').value,buyer=document.getElementById('f-buy').value,product=document.getElementById('f-prod').value,country=document.getElementById('f-co').value,lat=+document.getElementById('f-lat').value,lon=+document.getElementById('f-lon').value,docs=document.getElementById('f-docs').value;
+const id='SP-'+Date.now().toString(36).toUpperCase();const isEudr=product==='cocoa',isCbam=product==='steel';
+addAg(1,'Extract','Reading…');await sleep(400);const x=extract(docs);okAg(1);
+addAg(2,'Rules','Validating…');await sleep(350);const gaps=[];if(isEudr&&!x.hasGeo)gaps.push({code:'GEO',role:'supplier',a:'Upload GPS'});if(isEudr&&!x.hasOrigin)gaps.push({code:'ORIGIN',role:'supplier',a:'Attach cert'});if(isCbam)gaps.push({code:'ENERGY',role:'supplier',a:'Upload bills'});if(!x.hasReg)gaps.push({code:'KYB',role:'supplier',a:'Confirm registration'});okAg(2);
+addAg(3,'Action','Assigning…');await sleep(280);okAg(3);addAg(4,'Trust','Scoring…');await sleep(280);let trust=55;if(x.hasGeo)trust+=15;if(x.hasOrigin)trust+=12;if(x.hasReg)trust+=10;trust-=gaps.length*8;trust=Math.max(10,Math.min(95,trust));okAg(4);
+addAg(5,'Export','Pack…');await sleep(300);okAg(5);addAg(6,'Reorder','Next PO…');await sleep(250);okAg(6);
+SP={shipment_id:id,supplier,buyer,product,country,geo:{lat,lon},trust_score:trust,gaps,status:gaps.length?'review':'ready',price_eur:750};
+TL.push({role:'agent',t:new Date().toISOString(),text:'Passport '+id+' · trust '+trust});gaps.forEach(g=>TL.push({role:'agent',t:new Date().toISOString(),text:'Gap → '+g.role+': '+g.a}));
+document.getElementById('empty').classList.add('hidden');document.getElementById('out').classList.remove('hidden');
+document.getElementById('met').innerHTML='<div class="metric"><strong>'+id.slice(0,11)+'</strong><span>id</span></div><div class="metric '+(gaps.length?'':'ok')+'"><strong>'+(gaps.length?'review':'ready')+'</strong><span>status</span></div><div class="metric"><strong>'+trust+'</strong><span>trust</span></div><div class="metric"><strong>€750</strong><span>invoice</span></div>';
+document.getElementById('gaps').innerHTML=gaps.length?gaps.map(g=>'<div class="gap"><strong>'+g.code+'</strong> → '+g.role+': '+g.a+'</div>').join(''):'<div class="gap good">No gaps — ready to invoice.</div>';
+document.getElementById('json').textContent=JSON.stringify(SP,null,2);renderM();if(btn){btn.disabled=false;btn.textContent='▶ Run all 6 agents'}}
+function dl(){if(!SP){alert('Run agents first');return}const b=new Blob([JSON.stringify(SP,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=SP.shipment_id+'.json';a.click()}
+function renderM(){if(!SP)return;document.getElementById('m-empty').classList.add('hidden');document.getElementById('m-body').classList.remove('hidden');
+document.getElementById('m-roles').innerHTML='<span class="role">'+SP.supplier+'</span> → <span class="role">'+SP.buyer+'</span>';
+document.getElementById('m-tl').innerHTML=TL.map(i=>'<div class="tl-i"><span class="role">'+i.role+'</span> '+i.text+'</div>').join('')}
+function postM(){if(!SP)return;const r=document.getElementById('m-role').value,t=document.getElementById('m-msg').value.trim();if(!t)return;TL.push({role:r,t:new Date().toISOString(),text:t});document.getElementById('m-msg').value='';renderM()}
+</script>
+</body></html>
