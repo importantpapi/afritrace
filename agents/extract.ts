@@ -1,10 +1,7 @@
-/** Agent 2 — Extract: structured fields from text (+ optional LLM later) */
+/** Agent 2 — Extract: structured fields (deterministic + optional LLM) */
 import type { AgentContext, AgentResult, AuditEntry, ExtractedFields } from './types';
+import { llmExtractFields } from './llm_extract';
 
-/**
- * Deterministic extract. Production: replace body with OCR + OpenAI JSON schema
- * while keeping the same ExtractedFields output contract.
- */
 export function extractFields(
   text: string,
   ctx: AgentContext
@@ -58,20 +55,24 @@ export async function runExtract(
   audit: AuditEntry[]
 ): Promise<{ result: AgentResult; fields: ExtractedFields }> {
   const t0 = Date.now();
-  // Hook: if process.env.OPENAI_API_KEY, call LLM schema extract here
-  const fields = extractFields(text, ctx);
+  const useLlm = Boolean(process.env.OPENAI_API_KEY);
+  const fields = useLlm
+    ? await llmExtractFields(text, ctx)
+    : extractFields(text, ctx);
+
   audit.push({
     at: new Date().toISOString(),
     agent: 'extract',
-    event: 'fields_extracted',
+    event: useLlm ? 'fields_extracted_llm' : 'fields_extracted_deterministic',
     data: { keys: Object.keys(fields) },
   });
+
   return {
     result: {
       agent: 'extract',
       ok: true,
       durationMs: Date.now() - t0,
-      output: { fields },
+      output: { fields, mode: useLlm ? 'llm' : 'deterministic' },
     },
     fields,
   };

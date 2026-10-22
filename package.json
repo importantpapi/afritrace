@@ -1,11 +1,19 @@
 {
   "name": "afritrace",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "Afritrace CBAM · EUDR · Battery Passport",
+  "description": "Afritrace — AI multi-agent CBAM · EUDR · Battery Passport",
   "scripts": {
     "dev": "npx serve -l 3000",
     "start": "npx serve -l 3000",
+    "typecheck": "tsc --noEmit",
     "deploy": "npx vercel --yes"
+  },
+  "dependencies": {
+    "@vercel/node": "^3.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^20.0.0"
   }
 }
