@@ -1,19 +1,24 @@
-# Go-to-market — first 20 EU importers
+# Outbound email (EU cocoa/coffee importer)
 
-Subject: EUDR-ready shipment passports — avoid compliance gaps
+Subject: EUDR-ready evidence pack in 72 hours — €750
 
 Hi [Name],
 
-From 30 December 2026, EUDR requires geolocation, traceability, risk assessment, and DDS documentation for every relevant shipment entering the EU.
+From 30 December 2026, EUDR requires plot geolocation, production dates, legality evidence, and a DDS before relevant goods enter the EU market.
 
-AfriTrace produces an audit-ready Shipment Passport: verified supplier, plot geolocation, legality/deforestation docs, gap analysis, corrective actions, DDS-ready export, and a multiplayer mission room for buyer + supplier + freight.
+Most delays are not “software” — they are incomplete supplier evidence (wrong GPS format, missing harvest dates, certificates that don’t map to plots).
 
-We also monitor documents and propose the next reorder, so compliance and supply continuity stay under control.
+Afritrace turns those documents into a buyer-ready compliance pack:
 
-Would a 20-minute call this week be useful to assess your current gap?
+1. You or the supplier send PDFs / WhatsApp / GPS files
+2. AI extracts and checks EUDR rules (6-decimal GPS, polygon if plot >4 ha, dates, legality)
+3. We send exact remediation requests to the supplier
+4. You get PDF/JSON evidence pack + risk findings for your file
+
+€750 per shipment (or €1,500 with human review). No annual commitment for the pilot.
+
+Can we run this on your next Côte d’Ivoire / Ghana cocoa or coffee shipment?
 
 Best,
 [Your name]
-AfriTrace
-
-Demo: https://afritrace-youbas-projects.vercel.app
+Afritrace
