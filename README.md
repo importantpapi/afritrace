@@ -1,69 +1,52 @@
 # Afritrace
 
-**AI-native CBAM · EUDR · EU Battery Passport compliance for African suppliers**
+AI-native compliance operations platform for EU import due diligence.
 
-Steel · Aluminum · Cocoa · Coffee · Lithium · Cobalt · Nickel
+**Positioning:** Afritrace prepares, validates, and monitors the evidence needed for EU import compliance—then routes exceptions to human review. It does not guarantee legal compliance or replace the operator’s DDS obligations.
 
-90% cheaper than European consultants (€5k–€50k/year vs €50k–€500k).
+**Initial wedge:** EUDR due-diligence packs for cocoa and coffee shipments entering the EU.
 
-## Live UI preview
+## Product journey
 
-Open the root `index.html` (or deploy this repo to Vercel — Framework: Other / static).
+1. Create shipment  
+2. Add evidence  
+3. Validate plots  
+4. Assess risk  
+5. Remediate gaps  
+6. Generate pack  
+7. Export / monitor  
 
-| Tab | What it does |
-|-----|----------------|
-| Home | Product overview |
-| Supplier | Live CBAM calculator + agent demos |
-| Buyer | Search suppliers, RFQ, escrow |
-| Admin | KPIs, agent health, review queue |
-| APIs | Endpoint reference |
-
-## Deploy to Vercel (public link)
-
-1. Go to [vercel.com/new](https://vercel.com/new)
-2. Import **importantpapi/afritrace**
-3. Framework preset: **Other**
-4. Root directory: `.` (repo root)
-5. Deploy → you get `https://afritrace-xxx.vercel.app`
-
-Or CLI:
-
-```bash
-npx vercel --yes
-```
-
-## Repository structure
+## Repo layout
 
 ```
-├── index.html              # Interactive UI (Vercel entry)
-├── vercel.json
-├── agents/                 # CBAM, EUDR, Battery, Verify, OCR
-├── frontend/               # Next.js app (pages + API routes)
-├── supabase/schema.sql     # Full database schema
-└── preview/                # Same UI (duplicate for reference)
+agents/           # Intake, Evidence, Geospatial, Risk, Pack agents + orchestrator
+prompts/          # Production LLM prompts (JSON-only outputs)
+rules/            # Deterministic EUDR rule engine
+schema/           # PostgreSQL + PostGIS DDL
+api/              # Vercel/serverless endpoints
+docs/             # Architecture and competitor notes
 ```
 
-## API endpoints (Next.js)
+## Stack
 
-| Method | Path | Purpose |
-|--------|------|---------|
-| POST | `/api/cbam/calculate` | CBAM emissions + XML |
-| POST | `/api/eudr/map` | Farm risk + DDS |
-| POST | `/api/battery/dpp` | Battery passport |
-| POST | `/api/verify` | Supplier risk score |
-| POST | `/api/upload` | Document upload |
-| POST | `/api/rfq` | Request for quote |
-| POST | `/api/escrow` | Milestone escrow |
+- Frontend: Next.js, TypeScript, Tailwind (UI prototype on Vercel)
+- Backend: API routes + PostgreSQL/PostGIS
+- AI: structured extraction + reasoning; rules are deterministic
+- Payments: Stripe
+- Storage: S3-compatible
 
-## Quick test (Python agents)
+## Pricing (launch)
 
-```bash
-cd agents/cbam && python emissions_calculator.py
-cd ../eudr && python risk_scorer.py
-cd ../battery && python passport.py
-cd ../verify && python risk_engine.py
-```
+| Plan | Price | Includes |
+|------|-------|----------|
+| Starter | €750 / shipment | AI extract, plot checks, risk, PDF/JSON pack |
+| Supplier Verified | €1,500 / year | Reusable supplier vault |
+| Growth | €2,500 / month | 5 shipments, portal, API |
+| Enterprise | Custom | Volume, ERP, review SLA |
 
-## License
+## Guardrails
 
-Engineering foundation for a commercial platform. Validate emission factors against official EU regulations before real filings.
+- LLM never decides pass/fail for legal thresholds
+- Human review required for blockers / high risk
+- Audit: prompts, model version, hashes, reviewer, timestamps
+- 5-year retention capability for production/traceability data
