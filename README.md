@@ -1,52 +1,34 @@
-# Afritrace
+# Afritrace — full-stack orchestrator
 
-AI-native compliance operations platform for EU import due diligence.
-
-**Positioning:** Afritrace prepares, validates, and monitors the evidence needed for EU import compliance—then routes exceptions to human review. It does not guarantee legal compliance or replace the operator’s DDS obligations.
-
-**Initial wedge:** EUDR due-diligence packs for cocoa and coffee shipments entering the EU.
-
-## Product journey
-
-1. Create shipment  
-2. Add evidence  
-3. Validate plots  
-4. Assess risk  
-5. Remediate gaps  
-6. Generate pack  
-7. Export / monitor  
-
-## Repo layout
+## Architecture
 
 ```
-agents/           # Intake, Evidence, Geospatial, Risk, Pack agents + orchestrator
-prompts/          # Production LLM prompts (JSON-only outputs)
-rules/            # Deterministic EUDR rule engine
-schema/           # PostgreSQL + PostGIS DDL
-api/              # Vercel/serverless endpoints
-docs/             # Architecture and competitor notes
+POST /api/v1/shipments          create + run orchestrator turn
+GET  /api/v1/shipments/:id      poll state (locked if unpaid)
+POST /api/v1/shipments/:id      refine turn (new evidence)
+POST /api/v1/shipments/:id/checkout   pay / owner unlock
+GET  /api/v1/shipments/:id/pack       download (402 if unpaid)
 ```
 
-## Stack
+Agents: intake → evidence → geo → **rules (code)** → risk → remediation → pack  
+Store: `lib/store.ts` in-memory → **swap for Supabase later**
 
-- Frontend: Next.js, TypeScript, Tailwind (UI prototype on Vercel)
-- Backend: API routes + PostgreSQL/PostGIS
-- AI: structured extraction + reasoning; rules are deterministic
-- Payments: Stripe
-- Storage: S3-compatible
+## Local
 
-## Pricing (launch)
+```bash
+npm install
+npm run dev
+```
 
-| Plan | Price | Includes |
-|------|-------|----------|
-| Starter | €750 / shipment | AI extract, plot checks, risk, PDF/JSON pack |
-| Supplier Verified | €1,500 / year | Reusable supplier vault |
-| Growth | €2,500 / month | 5 shipments, portal, API |
-| Enterprise | Custom | Volume, ERP, review SLA |
+Owner PIN default: `afritrace-owner` (env `OWNER_PIN`)
 
-## Guardrails
+## Connect backend later
 
-- LLM never decides pass/fail for legal thresholds
-- Human review required for blockers / high risk
-- Audit: prompts, model version, hashes, reviewer, timestamps
-- 5-year retention capability for production/traceability data
+1. Replace `lib/store.ts` with Supabase
+2. Replace `intakeAgent` body with OCR + OpenAI
+3. Stripe webhook → `markPaid(shipment_id)`
+4. Set `STRIPE_PAYMENT_LINK`
+
+## Live marketing UI (static paywall)
+
+https://afritrace-youbas-projects.vercel.app
